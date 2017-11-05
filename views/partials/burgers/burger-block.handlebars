@@ -1,0 +1,11 @@
+<!-- condition to determine if retrieved burger is devoured or not -->
+{{#if eaten}}
+	
+	
+	<h4 style="opacity: 0.4">{{this.dataValues.id}}.{{this.dataValues.burger_name}}</h4>
+
+{{else}}
+	
+	<h4>{{this.dataValues.id}}.{{this.dataValues.burger_name}}</h4>
+
+{{/if}}

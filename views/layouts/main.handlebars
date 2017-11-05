@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<body>
+		
+	<div class ="row">
+		<div class="col-lg-2 col-md-2"></div>
+
+		<div class ="jumbotron col-lg-8 col-md-8 text-center"><h1 style="color:rgba(160,30,6,0.7)">EAT-DA-BURGER!!</h1>
+			
+			<hr style="border-top: 1px solid rgb(131,169,185)">
+			<!-- form to take user input and send post request -->		
+			<form class="form-horizontal text-center" action="/api/burger" method="POST">
+	    	
+	    		<div class="input-group">
+	    			
+	   				<textarea style="resize: none; overflow: hidden;" class="form-control" id="order" name="burger_name" placeholder="what burger would you like...?"></textarea>
+	   				<button class="btn btn-danger btn-block" type="submit" id="placeOrder">Submit</button>
+
+	    		</div>
+	    	
+	    	</form>
+
+    	</div>
+		
+	</div>
+
+	<div class = "row">
+			
+		<div class="col-lg-3 col-md-3"></div>
+		<div class="col-lg-6 col-md-6">
+				<!--rendering index.handlebars  -->
+				{{{body}}}
+    			
+		</div>
+		<div class="col-lg-3 col-md-3"></div>
+	
+	</div>
+	
+	<script type="text/javascript" src="JS/handle.js"></script>
+</body>
+</html>
+
+		

@@ -1,0 +1,22 @@
+<!-- div to render burger data -->
+<div class="panel clearfix" style="width:100%;">
+	
+	<div class="orders text-center">
+		{{#each burgers}}
+			{{#unless devoured}}
+				{{> burgers/burger-block eaten=false}}
+				<button class="btn btn-danger devour" id="{{this.dataValues.id}}">Devour it!</button>
+			{{/unless}}
+		{{/each}}
+
+	</div>
+
+	<div class="orders text-center">
+		{{#each burgers}}
+			{{#if devoured}}
+				{{> burgers/burger-block eaten=true}}
+			{{/if}}
+		{{/each}}
+	</div>
+
+</div>

@@ -1,0 +1,52 @@
+.clearfix::after{
+
+		content:"";
+		display: block;
+		clear: both;
+	}
+	
+	.jumbotron{
+
+		border-radius: 10px;
+		background: rgba(178,178,170,0.4);
+		min-height: 250px;
+		
+		
+	}
+	.panel{
+		
+		border-radius: 10px;
+		background-color: rgba(178,178,170,0.4);
+
+	}
+	.input-group{
+
+		margin: auto;
+	}
+	.btn-danger:hover{
+
+		background: #486b23;
+		border:none;
+	}
+	.btn-danger{
+
+		background: rgba(160,30,6,0.7);
+		border: none;
+	}
+
+	.orders{
+		margin:5%;
+		float:left;
+		width:40%;
+		min-height: 150px;
+		border-radius: 10px;
+		border:1px solid rgb(131,169,185);
+	}
+	body{
+
+		background: url("assets/burger.jpg");
+		background-size: cover;
+	}
+	h4{
+		color:#ebf1f3;
+	}
