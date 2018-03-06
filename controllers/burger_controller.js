@@ -14,8 +14,8 @@ module.exports = function(router){
 
 	router.get("/burger", function(req, res){
 
-		db.burger.findAll({}).then(function(result){
-			
+		db.burger.findAll({include: [db.customer]}).then(function(result){
+				console.log(result);
 				var hbsObj = {
 
 					burgers: result
@@ -30,18 +30,15 @@ module.exports = function(router){
 	router.post("/api/burger", function(req, res){
 		var input = req.body.burger_name.replace(/[\W_]+/g, "");
 		console.log(input);
-		
-		db.burger.create({
-
-			burger_name: input
-
+		var name = req.body.customer_name.replace(/[\W_]+/g, "");
+		db.customer.findOrCreate({
+			where:{
+				customer_name:name
+			}
 		}).then(function(result){
 
-			
-			res.redirect('/burger');
-
+			console.log(result);
 		});
-
 
 	});
 	//put request method to update burger status in database

@@ -16,6 +16,11 @@ module.exports = function(sequelize, DataTypes){
 
 	} );
 
+	burger.associate = function(models){
 
-		return burger;
+		burger.belongsTo(models.customer);
+	}
+
+
+	return burger;
 }
